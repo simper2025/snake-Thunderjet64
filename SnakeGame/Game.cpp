@@ -33,12 +33,13 @@ void txtPlot(point item, unsigned char Color);
 point moverodent();
 
 int main() {
+    srand(time(0));
 
     //Uncomment the next four lines to see console color options 0-255
-    //for (int i = 0; i < 255; i++) {
-    //    setcolor(i);
-    //    _cprintf("Color option: %i. Hello, world.\n", i);
-    //}
+    /*for (int i = 0; i < 255; i++) {
+        setcolor(i);
+        _cprintf("Color option: %i. Hello, world.\n", i);
+    }*/
 
 	runGame();
 	return 0;
@@ -50,6 +51,7 @@ void runGame() {
     chrono::time_point<chrono::system_clock> currentTime;
     runTime = std::chrono::system_clock::now();
     Sleep(300);
+
 
     point playerloc = { 0, 10 };
     point direction = { 1, 0 };
